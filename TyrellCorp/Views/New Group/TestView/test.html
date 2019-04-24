@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Questionnaire</title>
+        <link rel="stylesheet" href="testStyle.css">
+    </head>
+    <body>
+        <div id="introduction" class="form">
+            <h2 class="title">Welcome to the Voight-Kampff Test</h2>
+            <h2 class="important">Please don't move.</h2>
+        <em>"Reaction time is a factor in this so please pay attention
+            and respond as quickly as you can".</em>
+            <br><br>
+            Press the start button when ready to begin.
+            <div class="button-wrapper">
+                <button type="button" name="button" class="button" onclick="startTest()">I am ready</button>
+            </div>
+        </div>
+
+
+        <div id="question1" class="form">
+            <h2 class="title">Question1</h2>
+            <div class="timer"></div>
+            <em>"You’re watching television. Suddenly you realize there’s a wasp crawling on your arm..."</em>
+            <br><br>
+            <div class="button-wrapper">
+                <button type="button" name="button" class="button" onclick="question1(1)">"I kill it"</button><br>
+                <button type="button" name="button" class="button" onclick="question1(2)">"I push it away"</button><br>
+                <button type="button" name="button" class="button" onclick="question1(3)">[check your arm to make sure there is no wasp]</button>
+            </div>
+        </div>
+
+        <div id="question2" class="form">
+            <h2 class="title">Question2</h2>
+            <div class="timer"></div>
+            <em>"You’re in a desert walking along in the sand when all of the sudden you look down, and you see a tortoise, it’s crawling toward you.
+                 You reach down, you flip the tortoise over on its back. The tortoise lays on its back, its belly baking in the hot sun, beating its legs
+                 trying to turn itself over, but it can’t, not without your help. But you’re not helping. Why is that?"</em>
+            <br><br>
+            <div class="button-wrapper">
+                <button type="button" name="button" class="button" onclick="question2(1)">"What do you mean I am not helping!?!"</button><br>
+                <button type="button" name="button" class="button" onclick="question2(2)">"Not sure why, you tell me!"</button><br>
+                <button type="button" name="button" class="button" onclick="question2(3)">[stare in silence while sweating uncontrollably]</button>
+            </div>
+        </div>
+
+        <div id="question3" class="form">
+            <h2 class="title">Question3</h2>
+            <div class="timer"></div>
+            <em>" You're watching a stage play - a banquet is in progress. The guests are enjoying an appetizer of raw oysters. The entree consists of boiled dog."</em>
+            <br><br>
+            <div class="button-wrapper">
+                <button type="button" name="button" class="button" onclick="question3(1)">"Raw oysters? Poor creatures"</button><br>
+                <button type="button" name="button" class="button" onclick="question3(2)">"Who's hungry?"</button><br>
+                <button type="button" name="button" class="button" onclick="question3(3)">"boiled dog? yikes!"</button>
+            </div>
+        </div>
+
+        <div id="question4" class="form">
+            <h2 class="title">Question4</h2>
+            <div class="timer"></div>
+            <em>" Describe in single words, only the good things that come into your mind about your mother. "</em>
+            <br><br>
+            <div class="button-wrapper">
+                <button type="button" name="button" class="button" onclick="question4(1)">"Do you ever get tired of personal questions?"</button>
+                <button type="button" name="button" class="button" onclick="question4(2)">"I have memories of her [take pictures out]"</button>
+                <button type="button" name="button" class="button" onclick="question4(3)">"I will tell you something about my mother! [Shoot the interviewer with your gun]"</button>
+            </div>
+        </div>
+
+        <div class="form" id="result">
+            <h2>Results</h2>
+                <div id="resultPercent" class="important"></div>
+                <div id="resultDescription"></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript"src="testScripts.js"></script>
+    </body>
+</html>

@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		0848FAEE226F07DD0089B11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FAED226F07DD0089B11D /* AppDelegate.swift */; };
-		0848FAF0226F07DD0089B11D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FAEF226F07DD0089B11D /* ViewController.swift */; };
+		0848FAF0226F07DD0089B11D /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FAEF226F07DD0089B11D /* SignViewController.swift */; };
 		0848FAF3226F07DD0089B11D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0848FAF1226F07DD0089B11D /* Main.storyboard */; };
 		0848FAF5226F07DF0089B11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0848FAF4226F07DF0089B11D /* Assets.xcassets */; };
 		0848FAF8226F07DF0089B11D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0848FAF6226F07DF0089B11D /* LaunchScreen.storyboard */; };
+		0848FB11226F235F0089B11D /* sign.html in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB0B226F235E0089B11D /* sign.html */; };
+		0848FB12226F235F0089B11D /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB0C226F235E0089B11D /* style.css */; };
+		0848FB13226F235F0089B11D /* tyrellLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB0D226F235E0089B11D /* tyrellLogo.jpg */; };
+		0848FB16226F235F0089B11D /* scripts.js in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB10226F235F0089B11D /* scripts.js */; };
+		0848FB1A226F23710089B11D /* testScripts.js in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB17226F23710089B11D /* testScripts.js */; };
+		0848FB1B226F23710089B11D /* testStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB18226F23710089B11D /* testStyle.css */; };
+		0848FB1C226F23710089B11D /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 0848FB19226F23710089B11D /* test.html */; };
+		0848FB1E226F42150089B11D /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB1D226F42150089B11D /* IO.swift */; };
+		0848FB20226F60580089B11D /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB1F226F60580089B11D /* constants.swift */; };
+		0848FB22226F63650089B11D /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB21226F63650089B11D /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0848FAEA226F07DD0089B11D /* TyrellCorp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyrellCorp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0848FAED226F07DD0089B11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0848FAEF226F07DD0089B11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0848FAEF226F07DD0089B11D /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		0848FAF2226F07DD0089B11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0848FAF4226F07DF0089B11D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0848FAF7226F07DF0089B11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0848FAF9226F07DF0089B11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0848FB0B226F235E0089B11D /* sign.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sign.html; sourceTree = "<group>"; };
+		0848FB0C226F235E0089B11D /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		0848FB0D226F235E0089B11D /* tyrellLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tyrellLogo.jpg; sourceTree = "<group>"; };
+		0848FB10226F235F0089B11D /* scripts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = scripts.js; sourceTree = "<group>"; };
+		0848FB17226F23710089B11D /* testScripts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = testScripts.js; sourceTree = "<group>"; };
+		0848FB18226F23710089B11D /* testStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = testStyle.css; sourceTree = "<group>"; };
+		0848FB19226F23710089B11D /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		0848FB1D226F42150089B11D /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		0848FB1F226F60580089B11D /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		0848FB21226F63650089B11D /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +75,80 @@
 			isa = PBXGroup;
 			children = (
 				0848FAED226F07DD0089B11D /* AppDelegate.swift */,
-				0848FAEF226F07DD0089B11D /* ViewController.swift */,
-				0848FAF1226F07DD0089B11D /* Main.storyboard */,
 				0848FAF4226F07DF0089B11D /* Assets.xcassets */,
-				0848FAF6226F07DF0089B11D /* LaunchScreen.storyboard */,
+				0848FAFF226F0BD10089B11D /* Controllers */,
 				0848FAF9226F07DF0089B11D /* Info.plist */,
+				0848FB03226F0D0E0089B11D /* Models */,
+				0848FB04226F0D1B0089B11D /* Others */,
+				0848FB00226F0BFA0089B11D /* Views */,
 			);
 			path = TyrellCorp;
+			sourceTree = "<group>";
+		};
+		0848FAFF226F0BD10089B11D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0848FAEF226F07DD0089B11D /* SignViewController.swift */,
+				0848FB21226F63650089B11D /* MainMenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0848FB00226F0BFA0089B11D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0848FB01226F0C190089B11D /* Webviews */,
+				0848FAF6226F07DF0089B11D /* LaunchScreen.storyboard */,
+				0848FAF1226F07DD0089B11D /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0848FB01226F0C190089B11D /* Webviews */ = {
+			isa = PBXGroup;
+			children = (
+				0848FB0A226F232E0089B11D /* LoginView */,
+				0848FB09226F23210089B11D /* TestView */,
+			);
+			name = Webviews;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		0848FB03226F0D0E0089B11D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0848FB1D226F42150089B11D /* IO.swift */,
+				0848FB1F226F60580089B11D /* constants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0848FB04226F0D1B0089B11D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		0848FB09226F23210089B11D /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				0848FB19226F23710089B11D /* test.html */,
+				0848FB17226F23710089B11D /* testScripts.js */,
+				0848FB18226F23710089B11D /* testStyle.css */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
+		0848FB0A226F232E0089B11D /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				0848FB0B226F235E0089B11D /* sign.html */,
+				0848FB10226F235F0089B11D /* scripts.js */,
+				0848FB0C226F235E0089B11D /* style.css */,
+				0848FB0D226F235E0089B11D /* tyrellLogo.jpg */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0848FAF8226F07DF0089B11D /* LaunchScreen.storyboard in Resources */,
+				0848FB16226F235F0089B11D /* scripts.js in Resources */,
+				0848FB13226F235F0089B11D /* tyrellLogo.jpg in Resources */,
+				0848FB1A226F23710089B11D /* testScripts.js in Resources */,
+				0848FB12226F235F0089B11D /* style.css in Resources */,
+				0848FB1C226F23710089B11D /* test.html in Resources */,
 				0848FAF5226F07DF0089B11D /* Assets.xcassets in Resources */,
+				0848FB11226F235F0089B11D /* sign.html in Resources */,
+				0848FB1B226F23710089B11D /* testStyle.css in Resources */,
 				0848FAF3226F07DD0089B11D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0848FAF0226F07DD0089B11D /* ViewController.swift in Sources */,
+				0848FAF0226F07DD0089B11D /* SignViewController.swift in Sources */,
+				0848FB22226F63650089B11D /* MainMenuViewController.swift in Sources */,
 				0848FAEE226F07DD0089B11D /* AppDelegate.swift in Sources */,
+				0848FB1E226F42150089B11D /* IO.swift in Sources */,
+				0848FB20226F60580089B11D /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

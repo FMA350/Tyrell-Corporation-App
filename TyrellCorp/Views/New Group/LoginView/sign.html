@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width"/>
+        <link type="text/css"rel="stylesheet" href="style.css">
+            <title>Tyrell Corp. webiste</title>
+            </head>
+    
+    <body>
+        <header>
+            <div class="container">
+                <div id="triangle-up"class="triangle-up" onclick="toggleMenu(this)"></div>
+            </div>
+        </header>
+        
+        <div id="login" class="content visible">
+            <div class="control form title">
+                <h1>Tyrell Corporate Login</h1>
+            </div>
+            <form class="form" autocomplete="off" onsubmit="login()">
+                <div class="control block-cube block-input">
+                    <input name="signinEmail", type="email", placeholder="Username/Email">
+                        <div class="bg-top">
+                            <div class="bg-inner"></div>
+                        </div>
+                        <div class="bg-right">
+                            <div class="bg-inner"></div>
+                        </div>
+                        <div class="bg">
+                            <div class="bg-inner"></div>
+                        </div>
+                        </div>
+                <div class="control block-cube block-input">
+                    <input name="signinPassword", type="password", placeholder="Password"><div class="bg-top">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg-right">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg">
+                        <div class="bg-inner"></div>
+                    </div>
+                    </div>
+                <button class="btn block-cube  block-cube-hover" type="submit">
+                    <div class="bg-top">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg-right">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="text">Log In</div></button>
+            </form>
+        </div>
+        
+        
+        
+        <div id="signup" class="content">
+            <div class="control form title">
+                <h1>Tyrell Corporate Signup</h1>
+            </div>
+            <form class="form" autocomplete="off" onsubmit="signup()">
+                <div class="control block-cube block-input">
+                    <input name="signupEmail", type="email", placeholder="Email" required>
+                        <div class="bg-top">
+                            <div class="bg-inner"></div>
+                        </div>
+                        <div class="bg-right">
+                            <div class="bg-inner"></div>
+                        </div>
+                        <div class="bg">
+                            <div class="bg-inner"></div>
+                        </div>
+                        </div>
+                <div class="control block-cube block-input">
+                    <input name="signupPassword1", type="password", placeholder="Password" required><div class="bg-top">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg-right">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg">
+                        <div class="bg-inner"></div>
+                    </div>
+                    </div>
+                <div class="control block-cube block-input">
+                    <input name="signupPassword2", type="password", placeholder="Repeat your Password" required><div class="bg-top">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg-right">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg">
+                        <div class="bg-inner"></div>
+                    </div>
+                    </div>
+                <button class="btn block-cube  block-cube-hover" type="submit">
+                    <div class="bg-top">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg-right">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg">
+                        <div class="bg-inner"></div>
+                    </div>
+                    <div class="text">Signup</div></button>
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>
