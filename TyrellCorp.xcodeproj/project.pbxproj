@@ -22,6 +22,9 @@
 		0848FB1E226F42150089B11D /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB1D226F42150089B11D /* IO.swift */; };
 		0848FB20226F60580089B11D /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB1F226F60580089B11D /* constants.swift */; };
 		0848FB22226F63650089B11D /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB21226F63650089B11D /* MainMenuViewController.swift */; };
+		0848FB24227063660089B11D /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848FB23227063660089B11D /* UI.swift */; };
+		0878A0102270B67600AAADF3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0878A00F2270B67600AAADF3 /* TestViewController.swift */; };
+		0878A0122271B3F900AAADF3 /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0878A0112271B3F900AAADF3 /* protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		0848FB1D226F42150089B11D /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		0848FB1F226F60580089B11D /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		0848FB21226F63650089B11D /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		0848FB23227063660089B11D /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		0878A00F2270B67600AAADF3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0878A0112271B3F900AAADF3 /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 			children = (
 				0848FAED226F07DD0089B11D /* AppDelegate.swift */,
 				0848FAF4226F07DF0089B11D /* Assets.xcassets */,
+				0848FB0D226F235E0089B11D /* tyrellLogo.jpg */,
 				0848FAFF226F0BD10089B11D /* Controllers */,
 				0848FAF9226F07DF0089B11D /* Info.plist */,
 				0848FB03226F0D0E0089B11D /* Models */,
@@ -90,6 +97,7 @@
 			children = (
 				0848FAEF226F07DD0089B11D /* SignViewController.swift */,
 				0848FB21226F63650089B11D /* MainMenuViewController.swift */,
+				0878A00F2270B67600AAADF3 /* TestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 			children = (
 				0848FB1D226F42150089B11D /* IO.swift */,
 				0848FB1F226F60580089B11D /* constants.swift */,
+				0878A0112271B3F900AAADF3 /* protocols.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 		0848FB04226F0D1B0089B11D /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				0848FB23227063660089B11D /* UI.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -146,7 +156,6 @@
 				0848FB0B226F235E0089B11D /* sign.html */,
 				0848FB10226F235F0089B11D /* scripts.js */,
 				0848FB0C226F235E0089B11D /* style.css */,
-				0848FB0D226F235E0089B11D /* tyrellLogo.jpg */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -231,9 +240,12 @@
 			files = (
 				0848FAF0226F07DD0089B11D /* SignViewController.swift in Sources */,
 				0848FB22226F63650089B11D /* MainMenuViewController.swift in Sources */,
+				0878A0102270B67600AAADF3 /* TestViewController.swift in Sources */,
 				0848FAEE226F07DD0089B11D /* AppDelegate.swift in Sources */,
 				0848FB1E226F42150089B11D /* IO.swift in Sources */,
 				0848FB20226F60580089B11D /* constants.swift in Sources */,
+				0848FB24227063660089B11D /* UI.swift in Sources */,
+				0878A0122271B3F900AAADF3 /* protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

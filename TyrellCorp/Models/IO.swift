@@ -10,9 +10,9 @@ import Foundation
 
 
 struct UserData : Codable{
-    let email : String
-    let password : String
-    let statusCode : Int
+    var email : String
+    var password : String
+    var statusCode : Int
 }
 
 

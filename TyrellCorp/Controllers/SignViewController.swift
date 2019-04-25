@@ -11,12 +11,13 @@ import WebKit
 
 class SignViewController: UIViewController, WKNavigationDelegate {
     
+    var currentUser : UserData?
+    
     var webView : WKWebView!
-
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        print("view did load")
+        
         let config = WKWebViewConfiguration()               // object that holds configuration for the webview
         let userContentController = WKUserContentController() // object that enables js to swift communication
         
@@ -31,13 +32,19 @@ class SignViewController: UIViewController, WKNavigationDelegate {
         webView.uiDelegate = self
         
         if let url = Bundle.main.url(forResource: "sign", withExtension: "html"){
-            print("are we here?")
             webView.load(URLRequest(url: url)) //navigates to the specified page
             webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
             view = webView
         }
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMainMenu"{
+            let nextVC = segue.destination as! MainMenuViewController
+            nextVC.userData = currentUser!
+        }
+    }
+
 }
 
 
@@ -68,6 +75,7 @@ extension SignViewController: WKScriptMessageHandler {
             let dict = message.body as! [String: AnyObject]
             let email = dict["email"] as! String
             let password = dict["password"] as! String
+            //let statCode = dict["statusCode"] as! Int
             print(email)
             print(password)
             guard let savedData = loadUserData(key: email) else{
@@ -76,8 +84,11 @@ extension SignViewController: WKScriptMessageHandler {
             }
             if savedData.password == password{
                 print("granting access")
+                currentUser = UserData(email: email, password: password, statusCode: savedData.statusCode)
                 //grant access
+                
                 performSegue(withIdentifier: "toMainMenu", sender: self)
+                
             }
         }
         

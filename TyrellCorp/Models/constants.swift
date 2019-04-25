@@ -8,5 +8,10 @@
 
 import Foundation
 
-let NEW_HIRE : Int = 0
+//struct STATUS{
+//    s:Int
+//}
 
+let NEW_HIRE : Int = 0
+let BLADE_RUNNER : Int = 1
+let DANGEORUS_ANDROID : Int = -1

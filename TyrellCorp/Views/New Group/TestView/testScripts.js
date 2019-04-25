@@ -1,28 +1,50 @@
 let remainingTime;
 let loop_handle;
-let score =0;
+let currentQuestion = 1
+let score = 0;
+
+
+function clockHandler(){
+    remainingTime -= 0.1;
+    $(".timer").text(remainingTime.toFixed(2));
+    if(remainingTime < 5){
+        $(".timer").addClass("important");
+    }
+    if(remainingTime < 0){
+        nextQuestion()
+    }
+}
+
+function nextQuestion(){
+    switch (currentQuestion) {
+        case 1: question1(3);
+            break;
+        case 2: question2(3);
+                break;
+        case 3: question3(1)
+                break;
+        case 4: question4(3)
+                break;
+        default:
+                break
+
+
+    }
+}
 
 function startTest(){
-// set timer for 15 sec per question
     remainingTime = 15;
     $("#introduction").css("display", "none");
     $("#question1").css("display", "block");
-    loop_handle = setInterval(function(){
-        remainingTime -= 0.1;
-        $(".timer").text(remainingTime.toFixed(2));
-        if(remainingTime < 5){
-            $(".timer").addClass("important");
-        }
-        if(remainingTime < 0){
-            let win = window.open('https://www.youtube.com/watch?v=ARPCjp0ppEE', '_blank');
-            alert("I have seen things, you people wouldn't believe...");
-            clearInterval(loop_handle);
-        }
-    },100);
+    loop_handle = setInterval(clockHandler, 100);
 }
 
 
 function question1(answer){
+    $(".timer").removeClass("important");
+    $("#question1").css("display", "none");
+    $("#question2").css("display", "block");
+    currentQuestion = 2
     if(answer == "1"){
         score += 0.3;
     }
@@ -33,24 +55,15 @@ function question1(answer){
         score += 1;
     }
     clearInterval(loop_handle);
-    remainingTime= 15;
-    $("#question1").css("display", "none");
-    $("#question2").css("display", "block");
-    loop_handle = setInterval(function(){
-        remainingTime -= 0.1;
-        $(".timer").text(remainingTime.toFixed(2));
-        if(remainingTime < 5){
-            $(".timer").addClass("important");
-        }
-        if(remainingTime < 0){
-            let win = window.open('https://www.youtube.com/watch?v=ARPCjp0ppEE', '_blank');
-            alert("I have seen things, you people wouldn't believe...");
-            clearInterval(loop_handle);
-        }
-    },100);
+    remainingTime = 25;
+    loop_handle = setInterval(clockHandler,100);
 }
 
 function question2(answer){
+    $(".timer").removeClass("important");
+    $("#question2").css("display", "none");
+    $("#question3").css("display", "block");
+    currentQuestion = 3
     if(answer == "1"){
         score += 0.8;
     }
@@ -60,25 +73,17 @@ function question2(answer){
     else if(answer=="3"){
         score += 1;
     }
-    $("#question2").css("display", "none");
-    $("#question3").css("display", "block");
     clearInterval(loop_handle);
-    remainingTime= 15;
-    loop_handle = setInterval(function(){
-        remainingTime -= 0.1;
-        $(".timer").text(remainingTime.toFixed(2));
-        if(remainingTime < 5){
-            $(".timer").addClass("important");
-        }
-        if(remainingTime < 0){
-            let win = window.open('https://www.youtube.com/watch?v=ARPCjp0ppEE', '_blank');
-            alert("I have seen things, you people wouldn't believe...");
-            clearInterval(loop_handle);
-        }
-    },100);
+    remainingTime= 18;
+    loop_handle = setInterval(clockHandler, 100);
 }
 
 function question3(answer){
+    $(".timer").removeClass("important");
+    $("#question3").css("display", "none");
+    $("#question4").css("display", "block");
+    currentQuestion = 4
+
     if(answer == "1"){
         score += 0.8;
     }
@@ -88,26 +93,15 @@ function question3(answer){
     else if(answer=="3"){
         score += 0;
     }
-    $("#question3").css("display", "none");
-    $("#question4").css("display", "block");
+
     clearInterval(loop_handle);
     remainingTime= 15;
-    loop_handle = setInterval(function(){
-        remainingTime -= 0.1;
-        $(".timer").text(remainingTime.toFixed(2));
-        if(remainingTime < 5){
-            $(".timer").addClass("important");
-        }
-        if(remainingTime < 0){
-            let win = window.open('https://www.youtube.com/watch?v=ARPCjp0ppEE', '_blank');
-            alert("I have seen things, you people wouldn't believe...");
-            clearInterval(loop_handle);
-        }
-    },100);
+    loop_handle = setInterval(clockHandler, 100);
 }
 
 function question4(answer){
     clearInterval(loop_handle);
+    $(".timer").removeClass("important");
     if(answer == "1"){
         score += 0;
     }
@@ -117,17 +111,24 @@ function question4(answer){
     else if(answer=="3"){
         score += 1;
     }
+
     $("#question4").css("display", "none");
     $("#result").css("display", "block");
-    $("#resultPercent").text(answer/4);
-    if(answer/4 > 0.7){
-        $("#resultDescription").text("You are a replicant!");
+    //divide score by the number of questions
+    score /= 4
+    $("#resultPercent").text(score);
+
+    if(score > 0.7){
+        $("#resultDescription").text("$%@24;; SYSTEM ALERT: UNAUTHORIZED CORPORATE ACCESS; SYSTEM ALERT: REPLICANT USAGE DETECTED %$@24;;");
     }
-    else if(answer/4 > 0.3){
-        $("#resultDescription").text("You might be replicant, or just a strange person");
+    else if(score > 0.3){
+        $("#resultDescription").text("The test was unable unconclusive. Please run it again or visit the Tyrell Corporate headquarter for an interview with one of our specialists.");
     }
     else{
-        $("#resultDescription").text("Totally human! Welcome aboard!");
-
+        $("#resultDescription").text("The test was successful, thank you for taking part in our program.  ##ACCESS GRANTED##");
     }
+}
+
+function returnToApp(){
+    window.webkit.messageHandlers.sendResult.postMessage({score: score})
 }
