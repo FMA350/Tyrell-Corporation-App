@@ -44,7 +44,6 @@ class SignViewController: UIViewController, WKNavigationDelegate {
             nextVC.userData = currentUser!
         }
     }
-
 }
 
 
@@ -64,7 +63,7 @@ extension SignViewController: WKUIDelegate{
     }
 }
 
-    
+
 extension SignViewController: WKScriptMessageHandler {
     //handles the messages coming from Javascript
 
@@ -75,11 +74,10 @@ extension SignViewController: WKScriptMessageHandler {
             let dict = message.body as! [String: AnyObject]
             let email = dict["email"] as! String
             let password = dict["password"] as! String
-            //let statCode = dict["statusCode"] as! Int
             print(email)
             print(password)
             guard let savedData = loadUserData(key: email) else{
-                print("No saved data available")
+                webView.evaluateJavaScript("alert('Wrong email or password')", completionHandler: nil)
                 return
             }
             if savedData.password == password{
@@ -88,19 +86,22 @@ extension SignViewController: WKScriptMessageHandler {
                 //grant access
                 
                 performSegue(withIdentifier: "toMainMenu", sender: self)
-                
+            }
+            else{
+                webView.evaluateJavaScript("alert('Wrong email or password')", completionHandler: nil)
             }
         }
         
         else if message.name == "signup" {
             //do signup
-            print("In signup")
             let dict = message.body as! [String: AnyObject]
             let email = dict["email"] as! String
             let password = dict["password"] as! String
-            saveUserData(userData: UserData(email: email, password: password, statusCode: NEW_HIRE))
+            
+            currentUser = UserData(email: email, password: password, statusCode: NEW_HIRE)
+            
+            saveUserData(userData: currentUser!)
+            self.performSegue(withIdentifier: "toMainMenu", sender: self)
         }
-        
-        
     }
 }
